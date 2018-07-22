@@ -1,0 +1,17 @@
+DONE:
+
+Program driver1 if tweaked can manifest another bug -- instead of resetting
+the tree to the nicely balanced test tree, and searching each key,
+we can get a segfault if we search the same set of keys, starting from the
+initial complete tree, but NOT resetting each time.  That should still work
+ok of course -- no excuse for a segfault.
+TODO: find it, fix it.
+Resolution: tweak was retained as new program driver3, and the bug was trivial.
+
+DONE:
+
+Program driver1 does not generate correct results -- it provokes a bug
+to manifest within splay.c, which is GOOD.  Example: ./driver1 1
+TODO: find the bug, fix the bug
+
+$Id: TODO 160 2018-07-15 23:56:42Z predoehl $
